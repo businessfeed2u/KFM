@@ -598,6 +598,12 @@ address {
 .social-icons ul li a.fb:hover{
 	background-color:#3b5998;
 }
+.social-icons ul li a.in {
+    background: url(../images/instagram.png)no-repeat 10px 3px;   
+}
+.social-icons ul li a.in:hover{
+	background-color:#3b5998;
+}
 .social-icons ul li a {
     background: url(../images/iconsprite.png)no-repeat 3px -33px;
     display: block;
@@ -606,7 +612,7 @@ address {
     transition: none;
 }
 .social-icons ul li a.pn {
-    background: url(../images/iconsprite.png)no-repeat 6px -108px;
+    background: url(../images/instagram.png)no-repeat 6px -108px;
 }
 .social-icons ul li a.pn:hover {
    background-color:#cc2127;

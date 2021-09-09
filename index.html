@@ -28,8 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 	<!--//flexslider-->
 	<link rel="stylesheet" href="css/lightbox.css">
-
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/9f20af5423.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -415,7 +415,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container">
 					<h3>Contact</h3>
 					<div class="col-md-8 contact-form">
-						<form>
+						<form id="submit-form" action="">
 							<input type="text" value="Name" onfocus="this.value = '';"
 								onblur="if (this.value == '') {this.value = 'Name';}" required="">
 							<div class="col-md-6 cnt-inpt">
@@ -462,10 +462,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="social-icons">
 						<ul>
-							<li><a href="#" class="fb"></a></li>
+							 <a href=""><i style="color: white;" class="fab fa-facebook fa-2x pl-2"></i></a><li><li></li></li>
+							<a href=""><i style="color: white;" class="fab fa-instagram fa-2x pl-2"></i></a><li><li></li></li>
+							<a href=""><i style="color: white;" class="fab fa-google fa-2x pl-2"></i>  </a><li><li></li></li>
+							
+							<!-- <li><a href="#" class="fb"></a></li>
 							<li><a href="#"></a></li>
 							<li><a href="#" class="gg"></a></li>
 							<li><a href="#" class="pn"></a></li>
+							<li><a href="#" class="in"></a></li> -->
+							
 						</ul>
 					</div>
 					<div class="clearfix"> </div>
@@ -496,6 +502,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					*/
 					$().UItoTop({ easingType: 'easeOutQuart' });
 				});
+			</script>
+			 <script>
+				$("#submit-form").submit((e)=>{
+					e.preventDefault()
+					$.ajax({
+						url:"https://script.google.com/macros/s/AKfycbxScxHy3W8_xH5F--8JHUAf3YJyv9dIfh8bQ_yh60lwNUSmZ49zgwDCy7IiuhlOu00X/exec",
+						data:$("#submit-form").serialize(),
+						method:"post",
+						success:function (response){
+						alert("Form Submited Succesfully")
+							window.location.reload()
+							//window.location.href="https://google.com"
+						},
+						error:function (err){
+							alert("Something Error")
+			
+						}
+					})
+				})
 			</script>
 </body>
 
